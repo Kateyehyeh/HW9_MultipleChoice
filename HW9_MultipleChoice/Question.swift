@@ -9,6 +9,6 @@ struct QuestionList{
     var questions:String
     var correctAnswerIndex:Int
     var options:[String]
-    var explanation:[String]
+    var explanation:String
 }
 

@@ -9,21 +9,21 @@ import UIKit
 
 class ScoreViewController: UIViewController {
 
+    var finalScore: Int = 0
+    var totalQuestions: Int = 0
+    
+    @IBOutlet weak var scoreLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    //每次畫面即將出現前呼叫(比viewDidLoad更適合處理即時更新)
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        //顯示成績在scorelabel上
+        scoreLabel.text = "Final Score：\n\(finalScore) / \(totalQuestions) 🎯"
     }
-    */
+
 
 }

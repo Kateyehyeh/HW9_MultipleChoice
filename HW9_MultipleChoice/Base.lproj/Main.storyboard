@@ -94,7 +94,7 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rQg-6q-qAq">
                                 <rect key="frame" x="150" y="734.33333333333337" width="102" height="38.666666666666629"/>
-                                <color key="backgroundColor" red="0.94901353119999998" green="0.93531984089999998" blue="0.8974402547" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.94901960784313721" green="0.93725490196078431" blue="0.89803921568627454" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" systemColor="viewFlipsideBackgroundColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button">
@@ -191,16 +191,32 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nj6-Ng-uOC">
+                                <rect key="frame" x="150" y="501.33333333333326" width="102" height="39"/>
+                                <color key="backgroundColor" red="0.94901960784313721" green="0.93725490196078431" blue="0.89803921568627454" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button">
+                                    <fontDescription key="titleFontDescription" name="Impact" family="Impact" pointSize="20"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="TapRetryButton:" destination="E12-yi-k1X" eventType="touchUpInside" id="koC-T7-GGi"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Zad-kG-ZdV"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="Nj6-Ng-uOC" firstAttribute="leading" secondItem="Zad-kG-ZdV" secondAttribute="leading" constant="150" id="0DO-ge-1S0"/>
                             <constraint firstItem="adJ-FN-Inl" firstAttribute="leading" secondItem="Zad-kG-ZdV" secondAttribute="leading" id="3iP-hf-fy4"/>
                             <constraint firstItem="uyr-dg-len" firstAttribute="centerX" secondItem="4dn-Pz-TYz" secondAttribute="centerX" id="6KD-Ub-gEa"/>
                             <constraint firstItem="uyr-dg-len" firstAttribute="top" secondItem="Zad-kG-ZdV" secondAttribute="top" constant="10" id="HFD-FW-tTz"/>
+                            <constraint firstItem="Nj6-Ng-uOC" firstAttribute="top" secondItem="Jx5-2A-TRR" secondAttribute="bottom" constant="85" id="OTd-zs-FC6"/>
                             <constraint firstItem="adJ-FN-Inl" firstAttribute="trailing" secondItem="Zad-kG-ZdV" secondAttribute="trailing" id="PBI-RF-xbk"/>
                             <constraint firstAttribute="bottom" secondItem="adJ-FN-Inl" secondAttribute="bottom" id="Q1e-98-Fvm"/>
                             <constraint firstItem="nrF-8f-sx4" firstAttribute="centerX" secondItem="4dn-Pz-TYz" secondAttribute="centerX" id="Uy2-Ul-XNC"/>
+                            <constraint firstItem="Zad-kG-ZdV" firstAttribute="trailing" secondItem="Nj6-Ng-uOC" secondAttribute="trailing" constant="150" id="VU8-se-FLG"/>
+                            <constraint firstItem="Nj6-Ng-uOC" firstAttribute="centerX" secondItem="4dn-Pz-TYz" secondAttribute="centerX" id="X5e-sn-tGN"/>
                             <constraint firstItem="Jx5-2A-TRR" firstAttribute="top" secondItem="nrF-8f-sx4" secondAttribute="bottom" constant="140" id="aCb-iI-Var"/>
                             <constraint firstItem="adJ-FN-Inl" firstAttribute="top" secondItem="4dn-Pz-TYz" secondAttribute="top" id="czg-bY-EcQ"/>
                             <constraint firstItem="Jx5-2A-TRR" firstAttribute="centerX" secondItem="4dn-Pz-TYz" secondAttribute="centerX" id="hn7-a3-1Tp"/>
@@ -208,6 +224,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="RetryButton" destination="Nj6-Ng-uOC" id="Eo5-vR-95E"/>
                         <outlet property="scoreLabel" destination="Jx5-2A-TRR" id="efH-yV-5pG"/>
                     </connections>
                 </viewController>

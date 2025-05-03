@@ -378,17 +378,31 @@ class ViewController: UIViewController {
     }
     
     
-    //顯示總成績
+    //顯示總成績頁面(跳轉ScoreViewController)
     func showFinalScore() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        //用程式連結ScoreViewController
+        //連結ScoreViewController
         if let resultVC = storyboard.instantiateViewController(withIdentifier: "ScoreViewController") as? ScoreViewController {
             resultVC.finalScore = score
             resultVC.totalQuestions = questions.count
+            //指定自己作為代理人，讓Scorepage可以通知"Retry"
+            resultVC.delegate = self
             self.present(resultVC, animated: true, completion: nil)
         }
     }
     
-    
+}
+
+//延伸ViewController類別，實作RetryDelegate協定
+extension ViewController: RetryDelegate {
+    //實作協定：當ScoreViewController按下Retry時呼叫function
+    func didTapRetry() {
+        
+        currentIndex = 0
+        score = 0
+        questions.shuffle()
+        questionNumberSlider.value = 1
+        updateUI()
+    }
 }
 
